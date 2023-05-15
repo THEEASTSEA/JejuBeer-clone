@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제주맥주 클론코딩</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="icon" type="image/png" href="https://cdn.imweb.me/thumbnail/20200722/e657e1d310455.png" sizes="16x16">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./main.css">
+
+  <!-- 전역 배지 lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- viual 요소 애니메이션   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+    integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- scroll to plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"
+    integrity="sha512-WFeBxQtM/n6U8/Nd0Hz/Hq7n75NImbzM7Kc0y/4kE0kHnH1Be+nzm32RwbGoDsW1D9fjjPvI8LIWxLrZhxew/w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스와이퍼 요소 슬라이드 -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script defer src="./main.js"></script>
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <HEADER>
+    <div class="inner">
+      <div class="header-left"></div>
+      <div class="header-center">
+        <div class="logo">
+          <a href="/">
+            <img src="https://cdn.imweb.me/thumbnail/20220715/b51f256bb5dcb.png" alt="JEJU BEER">
+          </a>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-right-meun">
+          <div class="text-menu">
+            <div class="text-menu-link">
+              <a href="javascript:void">LOGIN</a>
+              <a href="javascript:void">JOIN</a>
+              <a href="javascript:void">CART</a>
+              <a href="javascript:void" id="RECRUIT">RECRUIT</a>
+            </div>
+          </div>
+          <div class="button-menu">
+            <input type="button" class="btn--red" value="논알콜 제주누보 구매">
+            <input type="button" class="btn--blue" value="양조장 예약">
+          </div>
+        </div>
+      </div>
+      <!-- 전역 배지 li 태그로 할 것 -->
+      <div class="badges">
+        <div class="badge__button">
+          <img src="https://cdn.imweb.me/upload/S20200702f03eaee38b16e/2616c012b78f3.png" alt="button-chat">
+        </div>
+        <div class="badge__button">
+          <img src="https://jbimweb.s3.ap-northeast-2.amazonaws.com/resource/images/button-share.png"
+            alt="button-share">
+        </div>
+        <div class="badge__top">
+          <img src="https://jbimweb.s3.ap-northeast-2.amazonaws.com/resource/images/button-top.png" alt="button-top">
+        </div>
+      </div>
+    </div>
+    <div class="mainmenu">
+      <div class="inner">
+        <a href="javascript:void()">BARREL SERIES</a>
+        <a href="javascript:void()">SUPPORTERS</a>
+        <a href="javascript:void()">JEJU BEER LIFE</a>
+        <a href="javascript:void()">SHOP</a>
+        <a href="javascript:void()">BREWERY</a>
+      </div>
+    </div>
+  </HEADER>
+
+  <SECTION class="visual">
+    <div class="inner">
+      <div class="video">
+        <video autoplay loop muted>
+          <source src="https://jbimweb.s3.ap-northeast-2.amazonaws.com/video/jb_jejulager_web_6.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </SECTION>
+
+  <SECTION class="visual2">
+    <div class="inner">
+      <div class="title fade-in">
+        <img class="beer1 title" src="https://cdn.imweb.me/thumbnail/20220517/6e3f902eebdb9.png" alt="JEJU LAGER">
+      </div>
+      <div class="image fade-in">
+        <img class="beer1 image" src="https://cdn.imweb.me/thumbnail/20220517/0352b0144d448.png" alt="LAGER IMAGE">
+        <div class="text">
+          <span>제주라거</span>는 맥주의 기본 4대 원료를 사용하는<br>
+          독일 맥주 순수령 원칙을 지킨<br>
+          제주 하얀 파도의 시원함과<br>
+          부드러움을 닮은 올 몰트 라거입니다.<br>
+        </div>
+      </div>
+    </div>
+  </SECTION>
+
+  <SECTION class="visual3">
+    <div class="inner">
+      <div class="title fade-in">
+        <img class="beer2 title" src="https://cdn.imweb.me/thumbnail/20210802/3badabe16b4cc.png" alt="JEJU LAGER">
+      </div>
+      <div class="image fade-in">
+        <img class="beer2 image" src="https://cdn.imweb.me/thumbnail/20220517/654c8d1e15f2e.png" alt="LAGER IMAGE">
+        <div class="text">
+          <span>제주 위트 에일</span>은 제주 감귤 껍질의 상큼함과 섬세한 꽃 향,<br>
+          입 안 가득 부드럽게 퍼지는 시트러스향이 만나<br>
+          산뜻한 끝 맛을 선사하는 밀맥주입니다. <br>
+        </div>
+      </div>
+    </div>
+  </SECTION>
+
+  <!-- 프로모션4 -->
+  <SECTION class="visual4">
+    <div class="inner">
+      <div class="title fade-in">
+        <img class="beer3 title" src="https://cdn.imweb.me/thumbnail/20210801/55a43112137c1.png" alt="JEJU LAGER">
+      </div>
+      <div class="image fade-in">
+        <img class="beer3 image" src="https://cdn.imweb.me/thumbnail/20220517/55e8833983cc3.png" alt="LAGER IMAGE">
+        <div class="text">
+          <span>제주 펠롱 에일</span>은 반딧불이 반짝이는 곶자왈에서 영감을 받아 탄생하였습니다.<br>
+          다양하고 개성있는 홉들을 블렌딩하여<br>
+          시트러스 아로마와 진한 맥아의 맛이 어우러져<br>
+          풍부한 풍미를 선사하는 페일에일 맥주입니다.
+        </div>
+      </div>
+    </div>
+  </SECTION>
+
+  <!-- 프로모션5 -->
+  <SECTION class="visual5">
+    <div class="inner">
+      <div class="title fade-in">
+        <img class="beer4 title" src="https://cdn.imweb.me/thumbnail/20210801/a61ddf39ed191.png" alt="JEJU LAGER">
+      </div>
+      <div class="image fade-in">
+        <img class="beer4 image" src="https://cdn.imweb.me/thumbnail/20220517/346dff4555658.png" alt="LAGER IMAGE">
+        <div class="text">
+          <span>제주 거멍 에일</span>은 제주의 여름밤을 떠올리게 하는 짙은 빛깔 속에서,<br>
+          제주 흑보리와 초콜릿 밀로 완성된<br>
+          은은한 달큰함과 경쾌한 풍미를 자아내는 흑맥주입니다.<br>
+        </div>
+      </div>
+    </div>
+  </SECTION>
+
+  <SECTION class="client">
+    <div class="text">
+      제주맥주는<br>
+      <span>전국 편의점 및 대형마트</span>에서 만나보실 수 있습니다.
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/7eb37ff38f03c.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/7a21ee2be7353.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/8573fd671b814.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/6cff932165c24.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/7434b6388c3f7.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/b20f4b0daca42.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/636fefe3f41d8.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/a0c6a623cf42e.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/187f0b5636736.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/7c9e1325bc8c3.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/914240682297d.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/34ecb3a2173d6.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.imweb.me/thumbnail/20210802/6799af9b876cd.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </SECTION>
+
+
+  <FOOTER class="footer">
+    <div class="footer__left">
+      <a href="javascript:void">ABOUT US</a>
+      <a href="javascript:void">OUR BEERS</a>
+      <a href="javascript:void">NEWS</a>
+      <a href="javascript:void">CONTACT</a>
+      <a href="javascript:void">IR</a>
+      <a href="javascript:void">이용약관</a>
+      <a id="black" href="javascript:void">개인정보 처리방침</a><br><br><br>
+      <a href="javascript:void">영상정보 처리방침</a><br><br><br>
+      제주맥주 주식회사 대표이사 문혁기<br>
+      본사) 제주특별자치도 제주시 한림읍 금능농공길 62-11 서울사무실) 서울특별시 중구 동호로 228 동호 38빌딩 6층<br>
+      호스팅 제공자 (주)아임웹 사업자등록번호 616-86-27415 통신판매업신고번호 제 2020-제주한림-0101 호<br>
+      고객센터 02-2235-5559, jejubeer@jejubeer.co.kr
+    </div>
+    <div class="footer__right">
+      <img src="https://cdn.imweb.me/upload/S20200702f03eaee38b16e/f553848b58e03.png" alt="Youtube">
+      <img src="https://cdn.imweb.me/upload/S20200702f03eaee38b16e/5215b07b123cf.png" alt="Facebook">
+      <img src="https://cdn.imweb.me/upload/S20200702f03eaee38b16e/08634a2341636.png" alt="instagram">
+      <img src="https://cdn.imweb.me/upload/S20200702f03eaee38b16e/29268409b8739.png" alt="Naver">
+    </div>
+  </FOOTER>
+
+</body>
+
+</html>
